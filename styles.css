@@ -1,0 +1,274 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  color: #6d6d6d;
+  background: #f6f4f2;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 46vh;
+  min-height: 320px;
+  overflow: hidden;
+  background: #e9e3df;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(90%);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hero__frame {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding: 30px 60px;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.hero__name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.hero__title {
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 300;
+}
+
+.page {
+  max-width: 1100px;
+  margin: -80px auto 60px;
+  padding: 0 24px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) 1fr;
+  gap: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.card__left {
+  border-right: 1px solid #f0e9e4;
+  padding-right: 28px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.profile__image {
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 6px solid #f4f0ed;
+}
+
+.section-title {
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #a08f86;
+  margin-bottom: 16px;
+}
+
+.info {
+  display: grid;
+  gap: 10px;
+  font-size: 12px;
+  color: #7d7a78;
+}
+
+.info__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #f1ece9;
+  padding-bottom: 6px;
+}
+
+.info__label {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #b8aaa1;
+}
+
+.info__value {
+  text-align: right;
+}
+
+.section {
+  margin-bottom: 34px;
+}
+
+.section--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.timeline {
+  display: grid;
+  gap: 16px;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.timeline__year {
+  background: #e8e2df;
+  color: #a08f86;
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.timeline__school {
+  font-weight: 600;
+  color: #6f6b69;
+}
+
+.timeline__detail {
+  font-size: 12px;
+  color: #9a9592;
+  margin-top: 4px;
+}
+
+.skills {
+  display: grid;
+  gap: 16px;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.skill__label {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f2ebe7;
+  display: grid;
+  place-items: center;
+  color: #a08f86;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.skill__bar {
+  height: 10px;
+  background: #f3efec;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.skill__value {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #d1b4a9, #e6c9b8);
+  border-radius: 999px;
+}
+
+.interests {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.interest {
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #9a9592;
+}
+
+.interest__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid #e6ded9;
+  background: #f7f3f1;
+}
+
+@media (max-width: 960px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .card__left {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid #f0e9e4;
+    padding-bottom: 28px;
+  }
+
+  .section--grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__frame {
+    padding: 22px 32px;
+  }
+
+  .page {
+    margin-top: -40px;
+  }
+
+  .card {
+    padding: 28px;
+  }
+
+  .timeline__item {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline__year {
+    justify-self: start;
+  }
+}
